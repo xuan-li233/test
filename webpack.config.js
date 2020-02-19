@@ -1,15 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
 
 const PATHS = {
     root: path.join(__dirname, '/'),
     src: path.join(__dirname, '/src'),
     dist: path.join(__dirname, '/dist'),
 };
-
-new webpack.EnvironmentPlugin(['NODE_ENV']);
-
 
 config = {
     // Mode can be 'development' or 'production'
@@ -79,7 +75,3 @@ config = {
     ]
 };
 module.exports = config;
-console.log(process.env); // {}
-console.log(process.env.NODE_ENV); // development
-console.log("Process :",process.env.NODE_ENV);
-
